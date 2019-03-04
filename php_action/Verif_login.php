@@ -28,7 +28,9 @@ if (isset($_POST['btn_entrar'])) {
             $_SESSION['vmsg'] = true;
             $_SESSION['msg'] = "Logado com sucesso!";
             $_SESSION['id'] = $dados['id'];
-            $_SESSION['nome'] = $dados['nome'];
+            $_SESSION['usuario'] = $dados['usuario'];
+            $_SESSION['tipoConta'] = $dados['tipo'];
+
             header('Location: ../index.php');
         } else {
             $_SESSION['vmsg'] = true;

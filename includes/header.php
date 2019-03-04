@@ -1,3 +1,18 @@
+<?php
+
+    function menuBarLoginAdmin(){
+        echo '
+            <li><a href="php_action/logout.php">CPainel ADMIN</a></li>
+            <li><a href="php_action/logout.php">Sair</a></li> ';
+    }
+    function menuBarLoginFuncionario(){
+        echo '<li><a href="php_action/logout.php">Sair</a></li> ';
+    }
+    function menuBarLoginCliente(){
+        echo '<li><a href="php_action/logout.php">Sair</a></li> ';
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -54,9 +69,20 @@
         </ul>
 
         <ul id='Menu-login' class='dropdown-content'>
-            <li><a href="php_action/logout.php">Sair</a></li>
-            <!-- <li><a href=" php_action/logout.php">Sair</a></li> -->
-            <!-- <li><a href="#!">two</a></li>
+            <!-- <li><a href="php_action/logout.php">Sair</a></li> -->
+            <?php
+               if (!empty($_SESSION['tipoConta'])) {
+                    if ($_SESSION['tipoConta'] == "a") {
+                        menuBarLoginAdmin();
+                    } elseif ($_SESSION['tipoConta'] == "f") {
+                        menuBarLoginFuncionario();
+                    } elseif ($_SESSION['tipoConta'] == "c") {
+                        menuBarLoginCliente();
+                    }
+               }
+            ?>
+            <!-- <li><a href=" php_action/logout.php">Sair</a></li>
+            <li><a href="#!">two</a></li>
             <li class="divider" tabindex="-1"></li>
             <li><a href="#!">three</a></li>
             <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
@@ -75,13 +101,6 @@
 
             <a href="#" class="sidenav-trigger"  data-target="mobile-nav"><i class="material-icons">menu</i></a>
 
-            <!-- <ul  class="right hide-on-med-and-down" >
-                <li><a href="">PRODUTOS</a></li>
-                <li><a href="includes/headerLogin.php">CATEGORIAS</a></li>
-                <li><a id="login" href="login.php">LOGIN</a></li> -->
-                <!-- <li><a class='droplogin-trigger btn' href='#' data-target='Menu-login' id='painelUsuario'><?php echo 'Login'; ?></a></li> -->
-            <!-- </ul> -->
-
             <?php 
 
             
@@ -94,7 +113,7 @@
                 </ul>
                 ';
             } else {
-                $nome = $_SESSION['nome'];
+                $nome = $_SESSION['usuario'];
                 echo '
                 <ul  class="right hide-on-med-and-down" >
                 <li><a href="">PRODUTOS</a></li>
