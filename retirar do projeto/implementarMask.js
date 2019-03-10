@@ -1,8 +1,3 @@
-$(document).ready(function() {
-    $('.sidenav').sidenav();
-    $('.droplogin-trigger').dropdown();
-});
-
 
 $(document).ready(function() {
     $('#cnpj').mask('00.000.000/0000-00');

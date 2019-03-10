@@ -127,7 +127,7 @@ function iscpf ($numCPF){
 
 function istel($tel){
     $tel = preg_replace("/[^0-9]/", "", $tel);
-    $tel = str_pad($tel, 10, '0', STR_PAD_LEFT);
+    // $tel = str_pad($tel, 10, '0', STR_PAD_LEFT);
 
     if (strlen($tel) != 10) {
 		return false;
@@ -137,7 +137,7 @@ function istel($tel){
 
 function iscel($cel){
     $cel = preg_replace("/[^0-9]/", "", $cel);
-    $cel = str_pad($cel, 11, '0', STR_PAD_LEFT);
+    // $cel = str_pad($cel, 11, '0', STR_PAD_LEFT);
 
     if (strlen($cel) != 11) {
 		return false;
@@ -147,7 +147,7 @@ function iscel($cel){
 
 function iscep($cep){
     $cep = preg_replace("/[^0-9]/", "", $cep);
-    $cep = str_pad($cep, 8, '0', STR_PAD_LEFT);
+    // $cep = str_pad($cep, 8, '0', STR_PAD_LEFT);
 
     if (strlen($cep) != 8) {
 		return false;
@@ -155,13 +155,19 @@ function iscep($cep){
     return true;
 }
 
-// function name(){
+function isrg($cep){
+    $cep = preg_replace("/[^0-9]/", "", $cep);
+    // $cep = str_pad($cep, 9, '0', STR_PAD_LEFT);
 
-// }
+    if (strlen($cep) != 9) {
+		return false;
+    }
+    return true;
+}
 
-// $vl="87200-000";
+// $vl="45.454.545";
 
-// if (iscep($vl) == true) {
+// if (isrg($vl) == true) {
 //     echo "condição é verdadeira";
 // } else {
 //     echo "condição é falsa";

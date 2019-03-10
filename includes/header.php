@@ -70,11 +70,6 @@
             <li><a href="#!"><i class="material-icons">cloud</i>five</a></li> -->
         </ul>
 
-        <?php 
-            // session_start();
-            
-        ?>
-
         <!-- Menu Desktop (992px) -->
         <nav class="yellow" style="padding: 0px 10px;">
             <div class="nav-wrapper">
