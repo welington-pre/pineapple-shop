@@ -20,42 +20,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js/jquery_3.3.1.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+
     <script src="js/materialize.min.js"></script>
-    <title>PINEAPPLE-SHOP INDEX</title>
-    <style>      
 
-        @media screen and (min-width: 320px) and (max-width: 424px){
-            
-            #brand-logo{
-                font-size: 15px;
-            }
+    <!-- meus css - js -->
 
-        }
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    
+    <script src="js/header.js"></script>
+    <!-- meus css - js -->
 
-        @media screen and (min-width: 425px) and (max-width: 767px){
-
-            #brand-logo{
-                font-size: 20px;
-            }
-        
-        }
-    </style>
-
-    <script>
-        $(document).ready(function() {
-            $('.sidenav').sidenav();
-        });
-
-        $(document).ready(function() {
-            $('.droplogin-trigger').dropdown();
-        });
-
-    </script>
+    <title>PINEAPPLE-SHOP</title>
     
 </head>
 <body>
